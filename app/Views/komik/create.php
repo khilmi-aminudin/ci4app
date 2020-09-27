@@ -30,14 +30,17 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputSampul" class="col-sm-2 col-form-label">Sampul</label>
-                    <div class="col-sm-10">
+                    <label for="sampul" class="col-sm-2 col-form-label">Sampul</label>
+                    <div class="col-sm-2">
+                        <img src="/img/default.jpg" alt="" class="img-thumbnail img-preview">
+                    </div>
+                    <div class="col-sm-8">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input <?= ($validation->hasError('sampul')? 'is-invalid' : '') ?>" id="sampul" name='sampul'>
+                            <input type="file" class="custom-file-input <?= ($validation->hasError('sampul')? 'is-invalid' : '') ?>" id="sampul" name='sampul' onchange="previewImage()">
                             <label class="custom-file-label" for="sampul">Pilih Gambar</label>
-                            <div class="invalid-feedback">
-                            <?= $validation->getError('sampul') ?>
-                        </div>
+                                <div class="invalid-feedback">
+                                    <?= $validation->getError('sampul') ?>
+                                </div>
                         </div>
                     </div>
                 </div>
